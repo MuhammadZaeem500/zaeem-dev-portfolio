@@ -1,9 +1,9 @@
-import Portfolio from "./navbar/navbar";
+import HomePage from "./_components/home/page";
 
 export default function Home() {
   return (
     <div >
-     <Portfolio/>
+     <HomePage/>
     </div>
   );
 }
