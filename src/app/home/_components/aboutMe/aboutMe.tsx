@@ -1,10 +1,9 @@
 import Image from "next/image";
-// import aboutImg from "../../../../_assests/Me.JPG"; // replace with your image path
-import aboutImg from "../../../../_assests/Me.JPG";
+import aboutImg from "../../../app/_assests/Me.JPG";
 
 export default function AboutMe() {
   return (
-    <section className="bg-black text-white py-16 px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center md:items-start gap-10">
+    <section className="bg-black text-white py-16 px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center md:items-start gap-10" id="aboutMe">
       
       {/* Image */}
       <div className="relative w-full md:w-1/3 h-80 md:h-[400px] flex-shrink-0">
