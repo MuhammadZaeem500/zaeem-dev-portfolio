@@ -1,12 +1,12 @@
 import React from 'react'
 import HeroSection from "./_components/heroSection/heroSection";
-import Navbar from "../navbar/navbar";
-import AboutMe from '../aboutMe/page';
-import SkillsSection from '../skillSection/skillSection';
-import ProjectsSection from '../projectSection/projectSection';
-import ProjectDetails from '../projectDetails/projectDetails';
-import ContactSection from '../contactSection/contactSection';
-import Footer from '../footer/footer';
+import Navbar from "./_components/navbar/navbar";
+import About from './_components/about/about';
+import SkillsSection from './_components/skill/skill';
+import ProjectsSection from './_components/project/project';
+import ProjectDetails from '../home/_components/projectDetails/projectDetails';
+import ContactSection from '../home/_components/contactSection/contactSection';
+import Footer from '../home/_components/footer/footer';
 
 
 const HomePage = () => {
@@ -14,7 +14,7 @@ const HomePage = () => {
     <div>
       <Navbar />
       <HeroSection />
-      <AboutMe/>
+      <About/>
       <SkillsSection/>
       <ProjectsSection />
       <ProjectDetails />

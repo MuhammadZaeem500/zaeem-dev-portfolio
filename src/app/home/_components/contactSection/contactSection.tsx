@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
 
 export default function ContactSection() {
   return (
-    <section className="bg-black text-white py-16 px-6">
+    <section className="bg-black text-white py-16 px-6" id="contact">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 hover:bg-white hover:text-black transition">
           Get In Touch

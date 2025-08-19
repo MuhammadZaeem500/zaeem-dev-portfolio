@@ -37,7 +37,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section className="bg-black text-white py-16 px-6">
+    <section className="bg-black text-white py-16 px-6" id="projects">
       {/* Header */}
       <div className="text-center mb-12">
         <span className="inline-block px-4 py-1 border border-gray-600 rounded-full text-sm">
