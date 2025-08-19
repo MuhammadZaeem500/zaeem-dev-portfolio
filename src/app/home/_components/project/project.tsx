@@ -1,38 +1,43 @@
-// components/ProjectsSection.js
+"use client";
+
+import Image from "next/image";
+
 export default function ProjectsSection() {
   const projects = [
-    {
-      title: "Apex Darat - Enterprise-Grade Microservices Ecosystem",
+      {
+      title: "TDC HRM",
       description:
-        "Apex Darat is a microservices-based enterprise solution built with NestJS, PostgreSQL, Kafka, Redis, and Prisma, covering HRM, eCommerce, procurement, project management, and sales management. It features event-driven architecture, optimized database performance, robust security (JWT, OAuth, RBAC), and automated CI/CD pipelines, ensuring scalability, efficiency, and seamless real-time data processing.",
-      tech: [
-        "Node.js", "NestJS", "Postgres", "Microservices", "Kafka",
-        "Prisma", "Next.js", "Redux", "TailwindCSS"
-      ],
+        "A Human Resource Management platform with payroll automation, leave tracking, and performance analytics, designed for enterprises.",
+      tech: ["React.JS", "NestJS", "Postgres", "MUI", "Redux"],
+      image: "/Images/Me.JPG",
     },
     {
       title: "Wolves Art",
       description:
         "A creative digital art platform integrating NFTs, artist portfolios, and immersive web experiences, built for scalability and modern UI interactions.",
       tech: ["React.js", "Next.js", "Framer Motion", "TailwindCSS", "Firebase"],
+      image: "/Images/Me.JPG",
     },
     {
       title: "Lit Collective",
       description:
         "A community-driven content hub for literature enthusiasts, featuring collaborative writing tools, user-generated stories, and live discussion boards.",
       tech: ["Node.js", "Express", "MongoDB", "React.js", "Chakra UI"],
+      image: "/Images/Me.JPG",
     },
     {
-      title: "Horixon",
+      title: "Horizon",
       description:
         "A B2B SaaS solution for logistics and freight management, offering real-time tracking, route optimization, and predictive analytics.",
       tech: ["Next.js", "NestJS", "PostgreSQL", "Redis", "Docker"],
+      image: "/Images/Me.JPG",
     },
     {
       title: "TDC HRM",
       description:
         "A Human Resource Management platform with payroll automation, leave tracking, and performance analytics, designed for enterprises.",
-      tech: ["Node.js", "NestJS", "Postgres", "AWS", "TailwindCSS"],
+      tech: ["React.JS", "NestJS", "Postgres", "MUI", "Redux"],
+      image: "/Images/Me.JPG",
     },
   ];
 
@@ -52,58 +57,68 @@ export default function ProjectsSection() {
       </div>
 
       {/* Project list */}
-      <div className="space-y-20 max-w-6xl mx-auto">
-        {projects.map((proj, idx) => (
-          <div
-            key={proj.title}
-            className="flex flex-col md:flex-row items-center gap-8"
-          >
-            {/* Left placeholder grid (UI Mock) */}
-            <div className="w-full md:w-1/2 grid grid-cols-2 gap-2 bg-[#111] p-4 rounded-xl border border-gray-800 min-h-[250px]">
-              <div className="bg-indigo-500/70 rounded-lg"></div>
-              <div className="bg-gray-700 rounded-lg"></div>
-              <div className="bg-gray-700 rounded-lg"></div>
-              <div className="bg-indigo-500/70 rounded-lg"></div>
-            </div>
+      <div className="space-y-28 max-w-6xl mx-auto">
+        {projects.map((proj, idx) => {
+          const isRightImage = idx % 2 === 0;
 
-            {/* Right content */}
-            <div className="w-full md:w-1/2">
-              <h3 className="text-xl font-semibold">{proj.title}</h3>
-              <p className="text-gray-400 mt-3 text-sm">{proj.description}</p>
+          return (
+            <div
+              key={proj.title}
+              className={`flex flex-col md:flex-row items-center gap-8 ${
+                !isRightImage ? "md:flex-row-reverse" : ""
+              }`}
+            >
+              {/* Image */}
+              <div className="relative w-full md:w-1/2 h-80 md:h-[400px] rounded-xl overflow-visible">
+                <Image
+                  src={proj.image}
+                  alt={proj.title}
+                  fill
+                  className="object-cover rounded-xl"
+                />
 
-              {/* Tech tags */}
-              <div className="flex flex-wrap gap-2 mt-4">
-                {proj.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="text-xs bg-[#1a1a1a] border border-gray-700 rounded-full px-3 py-1"
-                  >
-                    {t}
-                  </span>
-                ))}
+                {/* Tech overlay on right side */}
+                <div
+                  className={`absolute -bottom-15 md:-bottom-12 -translate-y-1/2 -right-6 md:right-[-50px] w-[90%] md:w-auto flex flex-wrap gap-1 bg-white/10 p-3 md:p-2 rounded-lg backdrop-blur-sm z-10 justify-center md:justify-start`}
+                >
+                  {proj.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="text-[10px] sm:text-[11px] md:text-xs bg-[#1a1a1a]/70 border border-gray-700 rounded-full px-2 py-1 whitespace-nowrap"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
 
-              {/* Button */}
-              <button className="mt-6 inline-flex items-center gap-2 px-4 py-2 border border-gray-600 rounded-lg hover:bg-white hover:text-black transition">
-                View Project
-                <svg
-                  width="16"
-                  height="16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M5 12h14M12 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
+              {/* Content */}
+              <div className="w-full md:w-1/2">
+                <h3 className="text-xl font-semibold">{proj.title}</h3>
+                <p className="text-gray-400 mt-3 text-sm">{proj.description}</p>
+
+                {/* View Project Button */}
+                <button className="mt-6 inline-flex items-center gap-2 px-4 py-2 border border-gray-600 rounded-lg hover:bg-white hover:text-black transition">
+                  View Project
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 12h14M12 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
