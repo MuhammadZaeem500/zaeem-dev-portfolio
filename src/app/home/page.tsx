@@ -5,8 +5,9 @@ import About from './_components/about/about';
 import SkillsSection from './_components/skill/skill';
 import ProjectsSection from './_components/project/project';
 import ProjectDetails from '../home/_components/projectDetails/projectDetails';
-import ContactSection from '../home/_components/contactSection/contactSection';
+import ContactSection from './_components/contact/contact';
 import Footer from '../home/_components/footer/footer';
+import ExperienceTimeline from './_components/experience/experience';
 
 
 const HomePage = () => {
@@ -17,7 +18,7 @@ const HomePage = () => {
       <About/>
       <SkillsSection/>
       <ProjectsSection />
-      <ProjectDetails />
+      <ExperienceTimeline />
       <ContactSection/>
       <Footer/>
     </div>
