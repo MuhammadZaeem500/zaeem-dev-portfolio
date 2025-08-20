@@ -50,7 +50,7 @@ export default function ContactSection() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 max-w-6xl mx-auto">
-        {/* Contact Info */}
+
         <div className="space-y-6">
           <h3 className="font-semibold text-lg md:text-xl mb-2">Contact Information</h3>
           <div className="space-y-4">
@@ -68,7 +68,6 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Socials */}
           <div>
             <h3 className="font-semibold text-lg md:text-xl mb-2">Connect With Me</h3>
             <div className="flex gap-3 sm:gap-4">
@@ -88,7 +87,6 @@ export default function ContactSection() {
           </div>
         </div>
 
-        {/* Message Form */}
         <div className="bg-gray-900 p-5 sm:p-6 md:p-8 rounded-lg">
           <h3 className="font-semibold text-lg md:text-xl mb-4">Send Me a Message</h3>
           <form ref={formRef} className="space-y-4" onSubmit={handleSubmit}>
