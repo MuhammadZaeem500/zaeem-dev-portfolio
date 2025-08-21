@@ -41,6 +41,9 @@ const experiences: Experience[] = [
 export default function ExperienceTimeline() {
   return (
     <section className="w-full flex flex-col items-center px-6 py-16 bg-black text-white" id="experience">
+       <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 hover:bg-white hover:text-black transition">
+          Experience
+        </button>
       <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">
         Professional Journey & Work History
       </h2>

@@ -36,7 +36,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-black text-white py-12 px-4 sm:px-6 lg:px-16" id="contact">
+    <section className="bg-black text-white py-16 px-4 sm:px-6 lg:px-16" id="contact">
       <div className="max-w-6xl mx-auto text-center mb-10 sm:mb-12">
         <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 hover:bg-white hover:text-black transition">
           Get In Touch
