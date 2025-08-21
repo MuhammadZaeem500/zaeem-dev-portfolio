@@ -31,9 +31,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 bg-black text-white shadow-md">
+    <nav className="w-full fixed top-0 left-0 z-50 bg-transparent text-white shadow-md backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
-
         <div className="flex items-center space-x-2">
           <span className="text-lg sm:text-2xl font-mono">{"</>"}</span>
           <span className="font-bold text-base sm:text-lg cursor-pointer">
@@ -63,7 +62,7 @@ export default function Navbar() {
 
         <div className="hidden lg:flex">
           <a
-            href="/CV.pdf" 
+            href="/CV.pdf"
             download="Muhammad Zaeem Resume.pdf"
             className="bg-white text-black px-4 py-2 rounded-md font-semibold text-sm sm:text-base hover:bg-gray-200 transition"
           >
@@ -89,7 +88,7 @@ export default function Navbar() {
           ))}
 
           <a
-            href="/CV.pdf" 
+            href="/CV.pdf"
             download="Muhammad Zaeem Resume.pdf"
             className="bg-white text-black px-4 py-2 rounded-md font-semibold text-sm hover:bg-gray-200 transition"
           >
