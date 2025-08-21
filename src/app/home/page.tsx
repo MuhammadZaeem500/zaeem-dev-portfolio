@@ -4,7 +4,6 @@ import Navbar from "./_components/navbar/navbar";
 import About from './_components/about/about';
 import SkillsSection from './_components/skill/skill';
 import ProjectsSection from './_components/project/project';
-import ProjectDetails from '../home/_components/projectDetails/projectDetails';
 import ContactSection from './_components/contact/contact';
 import Footer from '../home/_components/footer/footer';
 import ExperienceTimeline from './_components/experience/experience';

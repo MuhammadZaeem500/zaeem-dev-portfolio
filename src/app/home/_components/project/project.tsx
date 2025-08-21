@@ -4,36 +4,40 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectDetails from "../projectDetails/projectDetails"; // 👈 import your details component
+import { Project } from "../../../../../types";
 
 export default function ProjectsSection() {
   const projects = [
     {
+      id: 1,
       title: "TDC HRM",
       description:
         "A Human Resource Management platform with payroll automation, leave tracking, and performance analytics, designed for enterprises.",
       tech: ["React.JS", "NestJS", "Postgres", "MUI", "Redux"],
       image: "/Images/Me.JPG",
-      details: true,
+      details: "true",
     },
     {
+      id: 2,
       title: "Wolves Art",
       description:
         "A creative digital art platform integrating NFTs, artist portfolios, and immersive web experiences.",
       tech: ["React.js", "Next.js", "Framer Motion", "TailwindCSS", "Firebase"],
       image: "/Images/Me.JPG",
-      details: false,
+      details: "false",
     },
     {
+      id: 3,
       title: "Lit Collective",
       description:
         "A community-driven hub for literature enthusiasts, featuring collaborative writing tools and live boards.",
       tech: ["Node.js", "Express", "MongoDB", "React.js", "Chakra UI"],
       image: "/Images/Me.JPG",
-      details: false,
+      details: "false",
     },
   ];
 
-  const [selectedProject, setSelectedProject] = useState<any | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <section className="bg-black text-white py-16 px-6" id="projects">
@@ -179,7 +183,7 @@ export default function ProjectsSection() {
               </motion.div>
 
               {/* 👇 Show full details if available */}
-              {selectedProject.details ? (
+              {selectedProject.details === "true" ? (
                 <ProjectDetails />
               ) : (
                 <div className="text-gray-400">
