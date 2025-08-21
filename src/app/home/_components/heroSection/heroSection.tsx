@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 export default function HeroSection() {
   return (
     <section
-      className="bg-black text-white flex flex-col items-center justify-center min-h-screen px-6 py-10 text-center"
+      className="bg-black text-white flex flex-col items-center justify-center min-h-screen px-6 py-22 md:py-16 text-center"
       id="home"
     >
       <motion.h1
         className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold leading-snug md:leading-tight"
-        initial={{ opacity: 0, x: 400 }}
+        initial={{ opacity: 0, x: -200 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: false, amount: 0.2 }}

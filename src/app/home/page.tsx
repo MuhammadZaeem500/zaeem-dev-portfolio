@@ -11,7 +11,7 @@ import ExperienceTimeline from './_components/experience/experience';
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <Navbar />
       <HeroSection />
       <About/>

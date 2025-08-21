@@ -16,7 +16,6 @@ export default function AboutMe() {
       </div>
 
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 relative">
-
         <motion.div
           className="relative w-full lg:w-1/3 h-80 md:h-[400px] flex-shrink-0"
           whileInView={{ opacity: 1, x: 0 }}
