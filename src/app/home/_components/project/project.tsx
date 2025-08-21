@@ -1,45 +1,39 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import ProjectDetails from "../projectDetails/projectDetails"; // 👈 import your details component
 
 export default function ProjectsSection() {
   const projects = [
-      {
+    {
       title: "TDC HRM",
       description:
         "A Human Resource Management platform with payroll automation, leave tracking, and performance analytics, designed for enterprises.",
       tech: ["React.JS", "NestJS", "Postgres", "MUI", "Redux"],
       image: "/Images/Me.JPG",
+      details: true,
     },
     {
       title: "Wolves Art",
       description:
-        "A creative digital art platform integrating NFTs, artist portfolios, and immersive web experiences, built for scalability and modern UI interactions.",
+        "A creative digital art platform integrating NFTs, artist portfolios, and immersive web experiences.",
       tech: ["React.js", "Next.js", "Framer Motion", "TailwindCSS", "Firebase"],
       image: "/Images/Me.JPG",
+      details: false,
     },
     {
       title: "Lit Collective",
       description:
-        "A community-driven content hub for literature enthusiasts, featuring collaborative writing tools, user-generated stories, and live discussion boards.",
+        "A community-driven hub for literature enthusiasts, featuring collaborative writing tools and live boards.",
       tech: ["Node.js", "Express", "MongoDB", "React.js", "Chakra UI"],
       image: "/Images/Me.JPG",
-    },
-    {
-      title: "Horizon",
-      description:
-        "A B2B SaaS solution for logistics and freight management, offering real-time tracking, route optimization, and predictive analytics.",
-      tech: ["Next.js", "NestJS", "PostgreSQL", "Redis", "Docker"],
-      image: "/Images/Me.JPG",
-    },
-    {
-      title: "TDC HRM",
-      description:
-        "A Human Resource Management platform with payroll automation, leave tracking, and performance analytics, designed for enterprises.",
-      tech: ["React.JS", "NestJS", "Postgres", "MUI", "Redux"],
-      image: "/Images/Me.JPG",
+      details: false,
     },
   ];
+
+  const [selectedProject, setSelectedProject] = useState<any | null>(null);
 
   return (
     <section className="bg-black text-white py-16 px-6" id="projects">
@@ -52,7 +46,8 @@ export default function ProjectsSection() {
           Featured Work &amp; Case Studies
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto mt-2">
-          Explore a selection of my recent projects showcasing my expertise in full stack development.
+          Explore a selection of my recent projects showcasing my expertise in
+          full stack development.
         </p>
       </div>
 
@@ -68,8 +63,14 @@ export default function ProjectsSection() {
                 !isRightImage ? "md:flex-row-reverse" : ""
               }`}
             >
-              {/* Image */}
-              <div className="relative w-full md:w-1/2 h-80 md:h-[400px] rounded-xl overflow-visible">
+              {/* Image + Tech Overlay */}
+              <motion.div
+                className="relative w-full md:w-1/2 h-80 md:h-[400px] rounded-xl overflow-visible"
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: false }}
+              >
                 <Image
                   src={proj.image}
                   alt={proj.title}
@@ -77,9 +78,13 @@ export default function ProjectsSection() {
                   className="object-cover rounded-xl"
                 />
 
-                {/* Tech overlay on right side */}
-                <div
-                  className={`absolute -bottom-15 md:-bottom-12 -translate-y-1/2 -right-6 md:right-[-50px] w-[90%] md:w-auto flex flex-wrap gap-1 bg-white/10 p-3 md:p-2 rounded-lg backdrop-blur-sm z-10 justify-center md:justify-start`}
+                {/* Tech overlay */}
+                <motion.div
+                  className="absolute -bottom-15 md:-bottom-12 -translate-y-1/2 -right-6 md:right-[-50px] w-[90%] md:w-auto flex flex-wrap gap-1 bg-white/10 p-3 md:p-2 rounded-lg backdrop-blur-sm z-10 justify-center md:justify-start"
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  viewport={{ once: false }}
                 >
                   {proj.tech.map((t) => (
                     <span
@@ -89,16 +94,24 @@ export default function ProjectsSection() {
                       {t}
                     </span>
                   ))}
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
 
-              {/* Content */}
-              <div className="w-full md:w-1/2">
+              {/* Text Content */}
+              <motion.div
+                className="w-full md:w-1/2"
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9 }}
+                viewport={{ once: false }}
+              >
                 <h3 className="text-xl font-semibold">{proj.title}</h3>
                 <p className="text-gray-400 mt-3 text-sm">{proj.description}</p>
 
-                {/* View Project Button */}
-                <button className="mt-6 inline-flex items-center gap-2 px-4 py-2 border border-gray-600 rounded-lg hover:bg-white hover:text-black transition">
+                <button
+                  onClick={() => setSelectedProject(proj)}
+                  className="mt-6 inline-flex items-center gap-2 px-4 py-2 border border-gray-600 rounded-lg hover:bg-white hover:text-black transition"
+                >
                   View Project
                   <svg
                     width="16"
@@ -115,11 +128,68 @@ export default function ProjectsSection() {
                     />
                   </svg>
                 </button>
-              </div>
+              </motion.div>
             </div>
           );
         })}
       </div>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {selectedProject && (
+          <motion.div
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="bg-[#111] p-6 rounded-xl max-w-3xl w-full relative overflow-y-auto max-h-[90vh]"
+              initial={{ scale: 0.9, opacity: 0, y: 50 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 50 }}
+              transition={{ duration: 0.3 }}
+            >
+              {/* Close button */}
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-white"
+              >
+                ✕
+              </button>
+
+              {/* Modal content */}
+              <motion.div
+                initial={{ opacity: 0, y: 50 }} // Start hidden and slightly down
+                animate={{ opacity: 1, y: 0 }} // Fade in + slide up
+                exit={{ opacity: 0, y: -50 }} // (Optional) animation when unmounting
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+              >
+                <h3 className="text-2xl font-bold mb-4">
+                  {selectedProject.title}
+                </h3>
+
+                <Image
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  width={600}
+                  height={300}
+                  className="rounded-lg mb-6 object-cover shadow-lg"
+                />
+              </motion.div>
+
+              {/* 👇 Show full details if available */}
+              {selectedProject.details ? (
+                <ProjectDetails />
+              ) : (
+                <div className="text-gray-400">
+                  <p>More details coming soon...</p>
+                </div>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
