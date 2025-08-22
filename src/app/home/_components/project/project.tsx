@@ -40,8 +40,8 @@ export default function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <section className="bg-black text-white py-16 px-6" id="projects">
-      {/* Header */}
+    <section className="bg-gray-900 text-white py-16 px-6" id="projects">
+
       <div className="text-center mb-12">
         <span className="inline-block px-4 py-1 border border-gray-600 rounded-full text-sm">
           My Projects

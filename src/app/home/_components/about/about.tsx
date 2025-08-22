@@ -24,7 +24,7 @@ export default function AboutMe() {
           viewport={{ once: false, amount: 0.2 }}
         >
           <Image
-            src="/images/Me-Imagined.png"
+            src="/Images/Me-Imagined.png"
             alt="Muhammad Zaeem"
             className="object-cover rounded-lg"
             fill

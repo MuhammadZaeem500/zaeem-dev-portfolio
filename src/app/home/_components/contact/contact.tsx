@@ -36,7 +36,10 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-black text-white py-16 px-4 sm:px-6 lg:px-16" id="contact">
+    <section
+      className="bg-black text-white py-16 px-4 sm:px-6 lg:px-16"
+      id="contact"
+    >
       <div className="max-w-6xl mx-auto text-center mb-10 sm:mb-12">
         <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 hover:bg-white hover:text-black transition">
           Get In Touch
@@ -45,18 +48,22 @@ export default function ContactSection() {
           Let’s Discuss Your Project
         </h2>
         <p className="text-gray-400 text-sm sm:text-base">
-          Have a project in mind or want to discuss potential opportunities? I’d love to hear from you.
+          Have a project in mind or want to discuss potential opportunities? I’d
+          love to hear from you.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 max-w-6xl mx-auto">
-
         <div className="space-y-6">
-          <h3 className="font-semibold text-lg md:text-xl mb-2">Contact Information</h3>
+          <h3 className="font-semibold text-lg md:text-xl mb-2">
+            Contact Information
+          </h3>
           <div className="space-y-4">
             <div className="flex items-center gap-3 bg-gray-900 p-3 sm:p-4 rounded-lg">
               <Mail className="w-5 h-5 text-gray-400" />
-              <span className="text-sm sm:text-base">zaeemsheikh102@gmail.com</span>
+              <span className="text-sm sm:text-base">
+                zaeemsheikh102@gmail.com
+              </span>
             </div>
             <div className="flex items-center gap-3 bg-gray-900 p-3 sm:p-4 rounded-lg">
               <Phone className="w-5 h-5 text-gray-400" />
@@ -69,16 +76,22 @@ export default function ContactSection() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg md:text-xl mb-2">Connect With Me</h3>
+            <h3 className="font-semibold text-lg md:text-xl mb-2">
+              Connect With Me
+            </h3>
             <div className="flex gap-3 sm:gap-4">
               <a
                 href="https://github.com/MuhammadZaeem500"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gray-900 p-3 sm:p-3.5 rounded-full hover:bg-gray-700 transition"
               >
                 <Github className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
                 href="https://www.linkedin.com/in/muhammad-zaeem-sheikh-a38215202/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gray-900 p-3 sm:p-3.5 rounded-full hover:bg-gray-700 transition"
               >
                 <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -88,7 +101,9 @@ export default function ContactSection() {
         </div>
 
         <div className="bg-gray-900 p-5 sm:p-6 md:p-8 rounded-lg">
-          <h3 className="font-semibold text-lg md:text-xl mb-4">Send Me a Message</h3>
+          <h3 className="font-semibold text-lg md:text-xl mb-4">
+            Send Me a Message
+          </h3>
           <form ref={formRef} className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               <input
@@ -125,9 +140,14 @@ export default function ContactSection() {
               type="submit"
               className="w-full flex items-center justify-center gap-2 bg-white text-black font-medium py-3 rounded hover:bg-gray-200 transition text-sm sm:text-base"
             >
-              <Send className="w-4 h-4 sm:w-5 sm:h-5" /> {loading ? "Sending..." : "Send Message"}
+              <Send className="w-4 h-4 sm:w-5 sm:h-5" />{" "}
+              {loading ? "Sending..." : "Send Message"}
             </button>
-            {success && <p className="mt-2 text-green-400 text-sm sm:text-base">{success}</p>}
+            {success && (
+              <p className="mt-2 text-green-400 text-sm sm:text-base">
+                {success}
+              </p>
+            )}
           </form>
         </div>
       </div>

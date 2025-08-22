@@ -17,12 +17,16 @@ export default function Footer() {
           <div className="flex gap-3">
             <a
               href="https://github.com/MuhammadZaeem500"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-gray-900 p-2 rounded-full hover:bg-gray-700 transition"
             >
               <Github className="w-4 h-4" />
             </a>
             <a
               href="https://www.linkedin.com/in/muhammad-zaeem-sheikh-a38215202/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-gray-900 p-2 rounded-full hover:bg-gray-700 transition"
             >
               <Linkedin className="w-4 h-4" />
@@ -72,6 +76,8 @@ export default function Footer() {
             <li>
               <a
                 href="https://github.com/MuhammadZaeem500"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-white"
               >
                 GitHub
@@ -80,6 +86,8 @@ export default function Footer() {
             <li>
               <a
                 href="https://www.linkedin.com/in/muhammad-zaeem-sheikh-a38215202/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-white"
               >
                 LinkedIn
@@ -88,6 +96,8 @@ export default function Footer() {
             <li>
               <a
                 href="https://www.instagram.com/muhammadzaeem500"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-white"
               >
                 Instagram
@@ -102,7 +112,7 @@ export default function Footer() {
             <li>
               <a
                 href="/CV.pdf"
-                download="Muhammad Zaeem Resume.pdf" 
+                download="Muhammad Zaeem Resume.pdf"
                 className="hover:text-white"
               >
                 Resume
