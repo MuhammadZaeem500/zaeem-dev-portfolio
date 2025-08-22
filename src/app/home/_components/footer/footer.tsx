@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, ArrowUp } from "lucide-react";
+import { Github, Linkedin, ArrowUp, ArrowDown } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -133,7 +133,11 @@ export default function Footer() {
           href="#"
           className="mt-4 md:mt-0 bg-gray-900 p-2 rounded-full hover:bg-gray-700 transition"
         >
-          <ArrowUp className="w-4 h-4" />
+          <ArrowUp
+            className="fixed bottom-6 right-6 bg-black text-white w-10 h-10 p-2 
+             rounded-full cursor-pointer shadow-lg 
+             transition-transform duration-300 hover:-translate-y-2"
+          />
         </a>
       </div>
     </footer>
