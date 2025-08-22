@@ -10,7 +10,7 @@ export default function AboutMe() {
       id="aboutMe"
     >
       <div className="text-center">
-        <span className="inline-block px-4 py-1 border bg-black border-gray-600 rounded-full text-sm">
+        <span className="inline-block px-4 py-1 border border-gray-600 rounded-full text-sm">
           About Me
         </span>
       </div>
