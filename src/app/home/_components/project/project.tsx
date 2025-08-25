@@ -3,27 +3,27 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ProjectDetails from "../projectDetails/projectDetails"; 
+import ProjectDetails from "../projectDetails/projectDetails";
 import { Project } from "../../../../../types";
 
 export default function ProjectsSection() {
   const projects = [
     {
       id: 1,
-      title: "TDC HRM",
-      description:
-        "A Human Resource Management platform with payroll automation, leave tracking, and performance analytics, designed for enterprises.",
-      tech: ["React.JS", "NestJS", "Postgres", "MUI", "Redux"],
-      image: "/Images/Me.JPG",
-      details: "true",
-    },
-    {
-      id: 2,
       title: "Wolves Art",
       description:
         "Wolves Art is a modern creative agency website built using Next.js, MUI, and Framer Motion. It showcases a wide range of design services, including Web Design, UI/UX Design, Print, Illustration, Motion Design, and Interactive Design. The website features a clean and responsive layout with smooth animations, making it easy for visitors to explore services and projects. Wolves Art combines creativity, functionality, and an engaging user experience to present professional design work in a visually appealing way.",
       tech: ["Next.JS", "Framer Motion", "MUI", "React Hooks", "TypeScript"],
       image: "/Images/WolvesArt.JPG",
+      details: "true",
+    },
+    {
+      id: 2,
+      title: "TDC HRM",
+      description:
+        "A Human Resource Management platform with payroll automation, leave tracking, and performance analytics, designed for enterprises.",
+      tech: ["React.JS", "NestJS", "Postgres", "MUI", "Redux"],
+      image: "/Images/Me.JPG",
       details: "true",
     },
     {
@@ -41,7 +41,7 @@ export default function ProjectsSection() {
 
   return (
     <section className="bg-gray-900 text-white py-16 px-6" id="projects">
-      {/* Section Header */}
+
       <div className="text-center mb-12">
         <span className="inline-block px-4 py-1 border border-gray-600 rounded-full text-sm">
           My Projects
@@ -55,7 +55,6 @@ export default function ProjectsSection() {
         </p>
       </div>
 
-      {/* Projects List */}
       <div className="space-y-28 max-w-6xl mx-auto">
         {projects.map((proj, idx) => {
           const isRightImage = idx % 2 === 0;
@@ -67,9 +66,9 @@ export default function ProjectsSection() {
                 !isRightImage ? "md:flex-row-reverse" : ""
               }`}
             >
-              {/* Project Image */}
+
               <motion.div
-                className="relative w-full md:w-1/2 rounded-xl overflow-visible"
+                className="relative w-full md:w-2/3 rounded-xl overflow-visible"
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -84,7 +83,7 @@ export default function ProjectsSection() {
                 />
 
                 <motion.div
-                  className={`absolute left-5/8 transform -translate-x-1/2 -bottom-6 md:-bottom-6 flex flex-wrap gap-2 bg-white/10 p-2 rounded-lg backdrop-blur-sm justify-center md:justify-start w-[90%]`}
+                  className={`absolute left-6/9 transform -translate-x-1/2 -bottom-14 md:-bottom-6 flex flex-wrap gap-2 bg-white/10 p-2 rounded-lg backdrop-blur-sm justify-center md:justify-start w-[80%] md:w-[75%]`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
@@ -101,7 +100,6 @@ export default function ProjectsSection() {
                 </motion.div>
               </motion.div>
 
-              {/* Project Text */}
               <motion.div
                 className="w-full md:w-1/2 mt-6 md:mt-0"
                 initial={{ opacity: 0, y: 100 }}
@@ -138,17 +136,16 @@ export default function ProjectsSection() {
         })}
       </div>
 
-      {/* Modal for Project Details */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div
-            className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-[#111] backdrop-blur-sm flex items-center justify-center z-50 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-[#111] p-6 rounded-xl max-w-3xl w-full relative overflow-y-auto max-h-[90vh]"
+              className="bg-gray-900 p-6 rounded-xl max-w-3xl w-full relative overflow-y-auto max-h-[90vh]"
               initial={{ scale: 0.9, opacity: 0, y: 50 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 50 }}
@@ -174,14 +171,14 @@ export default function ProjectsSection() {
                 <Image
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  width={600}
+                  width={750}
                   height={300}
                   className="rounded-lg mb-6 object-cover shadow-lg"
                 />
               </motion.div>
 
               {selectedProject.details === "true" ? (
-                <ProjectDetails />
+                <ProjectDetails projectId={selectedProject.id} />
               ) : (
                 <div className="text-gray-400">
                   <p>More details coming soon...</p>

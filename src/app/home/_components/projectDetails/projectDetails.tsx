@@ -2,10 +2,89 @@
 
 import { motion } from "framer-motion";
 
-export default function ProjectDetails() {
+interface ProjectDetailsProps {
+  projectId: number;
+}
+
+export default function ProjectDetails({ projectId }: ProjectDetailsProps) {
+  const projectDetails: Record<
+    number,
+    {
+      implementations: { title: string; desc: string }[];
+      stack: { title: string; items: string[] }[];
+    }
+  > = {
+    1: {
+      implementations: [
+        {
+          title: "Creative Showcase",
+          desc: "Built an interactive gallery to display services and artworks with smooth animations using Framer Motion.",
+        },
+        {
+          title: "Responsive Design",
+          desc: "Used MUI grid system and breakpoints to create a fully responsive, mobile-first layout.",
+        },
+        {
+          title: "Reusable Components",
+          desc: "Developed modular React components (cards, sections, navigation) for consistency and scalability.",
+        },
+        {
+          title: "SEO Optimization",
+          desc: "Implemented metadata, Open Graph tags, and server-side rendering in Next.js for improved SEO.",
+        },
+        {
+          title: "Smooth Navigation",
+          desc: "Integrated page transitions and hover animations with Framer Motion to enhance user experience.",
+        },
+        {
+          title: "Deployment & Hosting",
+          desc: "Deployed the project on Vercel with CI/CD pipeline for automatic builds and global delivery.",
+        },
+      ],
+      stack: [
+        { title: "Frontend", items: ["Next.js", "React", "MUI", "TypeScript"] },
+        { title: "Animation", items: ["Framer Motion"] },
+        { title: "State Management", items: ["React Hooks"] },
+        { title: "Styling", items: ["MUI Theming", "CSS-in-JS"] },
+        { title: "Deployment", items: ["Vercel"] },
+      ],
+    },
+    2: {
+      implementations: [
+        {
+          title: "Payroll Automation",
+          desc: "Automated salary generation, tax deductions, and overtime handling.",
+        },
+        {
+          title: "Leave Tracking",
+          desc: "Integrated leave approval workflows with calendar sync.",
+        },
+        {
+          title: "Performance Analytics",
+          desc: "Created dashboards for employee KPIs and performance metrics.",
+        },
+      ],
+      stack: [
+        { title: "Frontend", items: ["React.js", "MUI", "Redux"] },
+        { title: "Backend", items: ["NestJS", "Postgres"] },
+        { title: "Auth", items: ["JWT", "RBAC"] },
+        { title: "Hosting", items: ["AWS EC2", "Docker"] },
+      ],
+    },
+  };
+
+  const details = projectDetails[projectId];
+
+  if (!details) {
+    return (
+      <div className="text-gray-400">
+        <p>More details coming soon...</p>
+      </div>
+    );
+  }
+
   return (
-    <section className="bg-black text-white p-8 rounded-xl space-y-12 text-center">
-      
+    <section className="bg-[#111] text-white p-8 rounded-xl space-y-12 text-center">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -14,40 +93,7 @@ export default function ProjectDetails() {
       >
         <h2 className="text-2xl font-bold mb-6">Key Implementations</h2>
         <ul className="space-y-4 list-none max-w-3xl mx-auto text-gray-300 text-left">
-          {[
-            {
-              title: "Optimized Search with Elasticsearch",
-              desc: "Implemented full-text search, typo tolerance, and relevance-based ranking, allowing users to find polls by title, description, and topic, even handling misspellings.",
-            },
-            {
-              title: "Intelligent Poll Recommendation System",
-              desc: "Built a personalized recommendation engine based on user interactions, hashtags, and poll titles to boost engagement.",
-            },
-            {
-              title: "Auto-Poll Generation with GPT",
-              desc: "Developed an AI-powered feature that automatically generates polls based on a given prompt, streamlining poll creation.",
-            },
-            {
-              title: "Real-Time Engagement with WebSockets",
-              desc: "Enabled live poll updates, notifications, and chat messaging for seamless user interaction.",
-            },
-            {
-              title: "Scalable Backend with NestJS & PostgreSQL",
-              desc: "Designed a robust, modular architecture ensuring efficient API performance and database management.",
-            },
-            {
-              title: "Optimized Caching & Performance",
-              desc: "Integrated lazy caching strategies, reducing redundant database queries and improving response times.",
-            },
-            {
-              title: "Secure Authentication & Authorization",
-              desc: "Implemented JWT-based authentication, OAuth login, and RBAC (Role-Based Access Control) to ensure data security.",
-            },
-            {
-              title: "User Follow/Following System",
-              desc: "Designed a social networking model allowing users to follow others, view followed users’ polls, and receive real-time updates on new polls and activities.",
-            },
-          ].map((item, i) => (
+          {details.implementations.map((item, i) => (
             <motion.li
               key={i}
               className="leading-relaxed"
@@ -70,24 +116,7 @@ export default function ProjectDetails() {
       >
         <h2 className="text-2xl font-bold mb-6">Technical Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
-          {[
-            {
-              title: "Frontend",
-              items: ["Next.js", "Redux", "TailwindCSS", "Socket.io-client"],
-            },
-            {
-              title: "Backend",
-              items: ["Node.js", "NestJS", "Socket.io", "PostgreSQL", "Prisma", "Redis", "Elasticsearch"],
-            },
-            {
-              title: "Storage",
-              items: ["AWS S3", "Cloudinary"],
-            },
-            {
-              title: "Real-time Features",
-              items: ["Socket.io", "WebSocket", "Redis"],
-            },
-          ].map((stack, i) => (
+          {details.stack.map((stack, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 50 }}
@@ -110,7 +139,6 @@ export default function ProjectDetails() {
           ))}
         </div>
       </motion.div>
-
     </section>
   );
 }
