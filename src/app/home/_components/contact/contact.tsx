@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 export default function ContactSection() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -36,11 +37,21 @@ export default function ContactSection() {
   };
 
   return (
-    <section
+    <motion.section
       className="bg-black text-white py-16 px-4 sm:px-6 lg:px-16"
       id="contact"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: false }}
     >
-      <div className="max-w-6xl mx-auto text-center mb-10 sm:mb-12">
+      <motion.div
+        className="max-w-6xl mx-auto text-center mb-10 sm:mb-12"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, delay: 0.2 }}
+        viewport={{ once: false }}
+      >
         <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 hover:bg-white hover:text-black transition">
           Get In Touch
         </button>
@@ -51,19 +62,32 @@ export default function ContactSection() {
           Have a project in mind or want to discuss potential opportunities? I’d
           love to hear from you.
         </p>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 max-w-6xl mx-auto">
-        <div className="space-y-6">
+        <motion.div
+          className="space-y-6"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: false }}
+        >
           <h3 className="font-semibold text-lg md:text-xl mb-2">
             Contact Information
           </h3>
           <div className="space-y-4">
             <div className="flex items-center gap-3 bg-gray-900 p-3 sm:p-4 rounded-lg">
-              <Mail className="w-5 h-5 text-gray-400" />
-              <span className="text-sm sm:text-base">
-                zaeemsheikh102@gmail.com
-              </span>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=zaeemsheikh102@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 cursor-pointer hover:text-blue-500 transition"
+              >
+                <Mail className="w-5 h-5 text-gray-400" />
+                <span className="text-sm sm:text-base">
+                  zaeemsheikh102@gmail.com
+                </span>
+              </a>
             </div>
             <div className="flex items-center gap-3 bg-gray-900 p-3 sm:p-4 rounded-lg">
               <Phone className="w-5 h-5 text-gray-400" />
@@ -98,9 +122,15 @@ export default function ContactSection() {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-gray-900 p-5 sm:p-6 md:p-8 rounded-lg">
+        <motion.div
+          className="bg-gray-900 p-5 sm:p-6 md:p-8 rounded-lg"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: false }}
+        >
           <h3 className="font-semibold text-lg md:text-xl mb-4">
             Send Me a Message
           </h3>
@@ -136,21 +166,24 @@ export default function ContactSection() {
               required
             ></textarea>
 
-            <button
+            <motion.button
               type="submit"
               className="w-full flex items-center justify-center gap-2 bg-white text-black font-medium py-3 rounded hover:bg-gray-200 transition text-sm sm:text-base"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <Send className="w-4 h-4 sm:w-5 sm:h-5" />{" "}
               {loading ? "Sending..." : "Send Message"}
-            </button>
+            </motion.button>
+
             {success && (
-              <p className="mt-2 text-green-400 text-sm sm:text-base">
+              <p className="mt-2 text-blue-400 text-sm sm:text-base">
                 {success}
               </p>
             )}
           </form>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

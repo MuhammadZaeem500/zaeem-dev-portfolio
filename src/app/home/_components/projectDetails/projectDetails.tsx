@@ -6,7 +6,6 @@ export default function ProjectDetails() {
   return (
     <section className="bg-black text-white p-8 rounded-xl space-y-12 text-center">
       
-      {/* Key Implementations */}
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +62,6 @@ export default function ProjectDetails() {
         </ul>
       </motion.div>
 
-      {/* Technical Stack */}
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}

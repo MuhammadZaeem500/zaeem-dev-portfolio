@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ProjectDetails from "../projectDetails/projectDetails"; // 👈 import your details component
+import ProjectDetails from "../projectDetails/projectDetails"; 
 import { Project } from "../../../../../types";
 
 export default function ProjectsSection() {
@@ -21,10 +21,10 @@ export default function ProjectsSection() {
       id: 2,
       title: "Wolves Art",
       description:
-        "A creative digital art platform integrating NFTs, artist portfolios, and immersive web experiences.",
-      tech: ["React.js", "Next.js", "Framer Motion", "TailwindCSS", "Firebase"],
-      image: "/Images/Me.JPG",
-      details: "false",
+        "Wolves Art is a modern creative agency website built using Next.js, MUI, and Framer Motion. It showcases a wide range of design services, including Web Design, UI/UX Design, Print, Illustration, Motion Design, and Interactive Design. The website features a clean and responsive layout with smooth animations, making it easy for visitors to explore services and projects. Wolves Art combines creativity, functionality, and an engaging user experience to present professional design work in a visually appealing way.",
+      tech: ["Next.JS", "Framer Motion", "MUI", "React Hooks", "TypeScript"],
+      image: "/Images/WolvesArt.JPG",
+      details: "true",
     },
     {
       id: 3,
@@ -41,13 +41,13 @@ export default function ProjectsSection() {
 
   return (
     <section className="bg-gray-900 text-white py-16 px-6" id="projects">
-
+      {/* Section Header */}
       <div className="text-center mb-12">
         <span className="inline-block px-4 py-1 border border-gray-600 rounded-full text-sm">
           My Projects
         </span>
         <h2 className="text-3xl md:text-4xl font-bold mt-4">
-          Featured Work &amp; Case Studies
+          Featured Work & Case Studies
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto mt-2">
           Explore a selection of my recent projects showcasing my expertise in
@@ -55,7 +55,7 @@ export default function ProjectsSection() {
         </p>
       </div>
 
-      {/* Project list */}
+      {/* Projects List */}
       <div className="space-y-28 max-w-6xl mx-auto">
         {projects.map((proj, idx) => {
           const isRightImage = idx % 2 === 0;
@@ -67,9 +67,9 @@ export default function ProjectsSection() {
                 !isRightImage ? "md:flex-row-reverse" : ""
               }`}
             >
-              {/* Image + Tech Overlay */}
+              {/* Project Image */}
               <motion.div
-                className="relative w-full md:w-1/2 h-80 md:h-[400px] rounded-xl overflow-visible"
+                className="relative w-full md:w-1/2 rounded-xl overflow-visible"
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -78,15 +78,15 @@ export default function ProjectsSection() {
                 <Image
                   src={proj.image}
                   alt={proj.title}
-                  fill
-                  className="object-cover rounded-xl"
+                  width={600}
+                  height={400}
+                  className="object-cover rounded-xl w-full h-auto"
                 />
 
-                {/* Tech overlay */}
                 <motion.div
-                  className="absolute -bottom-15 md:-bottom-12 -translate-y-1/2 -right-6 md:right-[-50px] w-[90%] md:w-auto flex flex-wrap gap-1 bg-white/10 p-3 md:p-2 rounded-lg backdrop-blur-sm z-10 justify-center md:justify-start"
-                  initial={{ opacity: 0, x: -100 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  className={`absolute left-5/8 transform -translate-x-1/2 -bottom-6 md:-bottom-6 flex flex-wrap gap-2 bg-white/10 p-2 rounded-lg backdrop-blur-sm justify-center md:justify-start w-[90%]`}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                   viewport={{ once: false }}
                 >
@@ -101,9 +101,9 @@ export default function ProjectsSection() {
                 </motion.div>
               </motion.div>
 
-              {/* Text Content */}
+              {/* Project Text */}
               <motion.div
-                className="w-full md:w-1/2"
+                className="w-full md:w-1/2 mt-6 md:mt-0"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9 }}
@@ -138,7 +138,7 @@ export default function ProjectsSection() {
         })}
       </div>
 
-      {/* Modal */}
+      {/* Modal for Project Details */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div
@@ -154,7 +154,6 @@ export default function ProjectsSection() {
               exit={{ scale: 0.9, opacity: 0, y: 50 }}
               transition={{ duration: 0.3 }}
             >
-              {/* Close button */}
               <button
                 onClick={() => setSelectedProject(null)}
                 className="absolute top-4 right-4 text-gray-400 hover:text-white"
@@ -162,11 +161,10 @@ export default function ProjectsSection() {
                 ✕
               </button>
 
-              {/* Modal content */}
               <motion.div
-                initial={{ opacity: 0, y: 50 }} // Start hidden and slightly down
-                animate={{ opacity: 1, y: 0 }} // Fade in + slide up
-                exit={{ opacity: 0, y: -50 }} // (Optional) animation when unmounting
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
               >
                 <h3 className="text-2xl font-bold mb-4">
@@ -182,7 +180,6 @@ export default function ProjectsSection() {
                 />
               </motion.div>
 
-              {/* 👇 Show full details if available */}
               {selectedProject.details === "true" ? (
                 <ProjectDetails />
               ) : (
