@@ -50,27 +50,31 @@ export default function ProjectDetails({ projectId }: ProjectDetailsProps) {
       ],
     },
     2: {
-      implementations: [
-        {
-          title: "Payroll Automation",
-          desc: "Automated salary generation, tax deductions, and overtime handling.",
-        },
-        {
-          title: "Leave Tracking",
-          desc: "Integrated leave approval workflows with calendar sync.",
-        },
-        {
-          title: "Performance Analytics",
-          desc: "Created dashboards for employee KPIs and performance metrics.",
-        },
-      ],
-      stack: [
-        { title: "Frontend", items: ["React.js", "MUI", "Redux"] },
-        { title: "Backend", items: ["NestJS", "Postgres"] },
-        { title: "Auth", items: ["JWT", "RBAC"] },
-        { title: "Hosting", items: ["AWS EC2", "Docker"] },
-      ],
+  implementations: [
+    {
+      title: "Clean UI Design",
+      desc: "Developed a modern interface using MUI components with custom theming."
     },
+    {
+      title: "Responsive Layout",
+      desc: "Applied MUI grid system and breakpoints for seamless mobile and desktop experiences."
+    },
+    {
+      title: "Reusable Components",
+      desc: "Structured the project with modular React components for consistency and maintainability."
+    },
+    {
+      title: "Fast Deployment",
+      desc: "Deployed the project on Vercel with CI/CD for optimized performance and accessibility."
+    }
+  ],
+  stack: [
+    { title: "Frontend", items: ["React.js", "MUI"] },
+    { title: "Styling", items: ["MUI Theming", "CSS-in-JS"] },
+    { title: "Deployment", items: ["Vercel"] }
+  ]
+}
+
   };
 
   const details = projectDetails[projectId];

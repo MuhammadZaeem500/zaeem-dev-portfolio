@@ -12,28 +12,28 @@ export default function ProjectsSection() {
       id: 1,
       title: "Wolves Art",
       description:
-        "Wolves Art is a modern creative agency website built using Next.js, MUI, and Framer Motion. It showcases a wide range of design services, including Web Design, UI/UX Design, Print, Illustration, Motion Design, and Interactive Design. The website features a clean and responsive layout with smooth animations, making it easy for visitors to explore services and projects. Wolves Art combines creativity, functionality, and an engaging user experience to present professional design work in a visually appealing way.",
+        "Wolves Art is a modern creative agency website built using Next.JS, MUI, and Framer Motion. It showcases a wide range of design services, including Web Design, UI/UX Design, Print, Illustration, Motion Design, and Interactive Design. The website features a clean and responsive layout with smooth animations, making it easy for visitors to explore services and projects. Wolves Art combines creativity, functionality, and an engaging user experience to present professional design work in a visually appealing way.",
       tech: ["Next.JS", "Framer Motion", "MUI", "React Hooks", "TypeScript"],
       image: "/Images/WolvesArt-2.jpg",
       details: "true",
     },
     {
       id: 2,
-      title: "TDC HRM",
+      title: "Lit Collective",
       description:
-        "A Human Resource Management platform with payroll automation, leave tracking, and performance analytics, designed for enterprises.",
-      tech: ["React.JS", "NestJS", "Postgres", "MUI", "Redux"],
-      image: "/Images/Me.JPG",
+        "Lit Collective is a modern web application built with React.JS and MUI (Material-UI). The website delivers a clean, responsive, and professional design that highlights creative content in a simple and user-friendly way. MUI was used for building consistent UI components and applying custom themes. The project was deployed on Vercel, ensuring fast performance and global accessibility.",
+      tech: ["React.JS", "MUI", "TypeScript", "CSS-in-JS"],
+      image: "/Images/LitCollective.jpg",
       details: "true",
     },
     {
       id: 3,
-      title: "Lit Collective",
+      title: "Ethan Suero",
       description:
-        "A community-driven hub for literature enthusiasts, featuring collaborative writing tools and live boards.",
-      tech: ["Node.js", "Express", "MongoDB", "React.js", "Chakra UI"],
-      image: "/Images/Me.JPG",
-      details: "false",
+        "Ethan Suero is a web application built with React.js and MUI that delivers a sleek and responsive user interface. The project makes use of Material-UI’s theming and grid system to ensure a consistent design across devices. Structured with reusable components, the site is easy to maintain and extend. Deployed on Vercel, it benefits from fast loading speeds and reliable global hosting.",
+      tech: ["React.JS", "MUI", "TypeScript", "CSS-in-JS"],
+      image: "/Images/EthanSuero-1.jpg",
+      details: "true",
     },
   ];
 
