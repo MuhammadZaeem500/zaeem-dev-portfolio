@@ -10,7 +10,7 @@ export default function Footer() {
           <h3 className="text-white font-bold text-lg mb-3">
             {"</> Muhammad Zaeem"}
           </h3>
-          <p className="text-gray-400 text-sm mb-4">
+          <p className="text-gray-400 text-sm mb-4 text-justify">
             Front End Developer specializing in creating exceptional digital
             experiences with React, Next.js, and Nest.
           </p>

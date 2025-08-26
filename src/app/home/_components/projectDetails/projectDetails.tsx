@@ -50,31 +50,163 @@ export default function ProjectDetails({ projectId }: ProjectDetailsProps) {
       ],
     },
     2: {
+      implementations: [
+        {
+          title: "Clean UI Design",
+          desc: "Developed a modern interface using MUI components with custom theming.",
+        },
+        {
+          title: "Responsive Layout",
+          desc: "Applied MUI grid system and breakpoints for seamless mobile and desktop experiences.",
+        },
+        {
+          title: "Reusable Components",
+          desc: "Structured the project with modular React components for consistency and maintainability.",
+        },
+        {
+          title: "Fast Deployment",
+          desc: "Deployed the project on Vercel with CI/CD for optimized performance and accessibility.",
+        },
+      ],
+      stack: [
+        { title: "Frontend", items: ["React.js", "MUI"] },
+        { title: "Styling", items: ["MUI Theming", "CSS-in-JS"] },
+        { title: "Deployment", items: ["Vercel"] },
+      ],
+    },
+3: {
   implementations: [
     {
-      title: "Clean UI Design",
-      desc: "Developed a modern interface using MUI components with custom theming."
+      title: "Service Showcase",
+      desc: "Designed interactive service cards to present digital design and Webflow offerings clearly and attractively."
     },
     {
-      title: "Responsive Layout",
-      desc: "Applied MUI grid system and breakpoints for seamless mobile and desktop experiences."
+      title: "Responsive Design",
+      desc: "Implemented MUI grid system and CSS-in-JS to create a responsive layout for all devices."
     },
     {
       title: "Reusable Components",
-      desc: "Structured the project with modular React components for consistency and maintainability."
+      desc: "Built modular React components for consistent UI and easy maintenance across pages."
     },
     {
-      title: "Fast Deployment",
-      desc: "Deployed the project on Vercel with CI/CD for optimized performance and accessibility."
+      title: "Animations & Interactivity",
+      desc: "Enhanced user experience with Framer Motion for smooth transitions and interactive elements."
+    },
+    {
+      title: "Deployment",
+      desc: "Hosted on Vercel for fast, globally accessible performance."
     }
   ],
   stack: [
-    { title: "Frontend", items: ["React.js", "MUI"] },
-    { title: "Styling", items: ["MUI Theming", "CSS-in-JS"] },
+    { title: "Framework", items: ["React.js"] },
+    { title: "Styling", items: ["MUI", "CSS-in-JS"] },
+    { title: "Components", items: ["Reusable React Components"] },
+    { title: "State & Hooks", items: ["React Hooks"] },
+    { title: "Animations", items: ["Framer Motion"] },
     { title: "Deployment", items: ["Vercel"] }
   ]
-}
+},
 
+    4: {
+      implementations: [
+        {
+          title: "Multi-Page Navigation",
+          desc: "Built a multi-page application using Next.js routing to provide detailed Saudi passport information.",
+        },
+        {
+          title: "Reusable Components",
+          desc: "Developed modular React components for consistent UI and easy maintainability across pages.",
+        },
+        {
+          title: "Data Handling with Utils",
+          desc: "Stored structured visa and citizenship information in utility files for quick updates and maintainability.",
+        },
+        {
+          title: "React Hooks & State Management",
+          desc: "Used React Hooks, including useMemo, useRef, and useEffect, to handle dynamic content, manage references, and optimize performance.",
+        },
+        {
+          title: "Icons & Visual Enhancements",
+          desc: "Integrated React Icons to improve the visual appeal and user experience.",
+        },
+        {
+          title: "Animations",
+          desc: "Implemented smooth animations and transitions using Framer Motion for interactive UI elements.",
+        },
+        {
+          title: "Responsive Design",
+          desc: "Implemented a mobile-first, responsive UI using Tailwind CSS for seamless experience on all devices.",
+        },
+        {
+          title: "Deployment",
+          desc: "Deployed the project on Vercel for fast, globally accessible performance.",
+        },
+      ],
+      stack: [
+        { title: "Framework", items: ["Next.js"] },
+        { title: "Styling", items: ["Tailwind CSS"] },
+        { title: "Components", items: ["Reusable React Components"] },
+        {
+          title: "State & Hooks",
+          items: ["React Hooks", "useMemo", "useRef", "useEffect"],
+        },
+        { title: "Icons", items: ["React Icons"] },
+        { title: "Animations", items: ["Framer Motion"] },
+        { title: "Data Handling", items: ["Utility Files - Utils"] },
+        { title: "Deployment", items: ["Vercel"] },
+      ],
+    },
+    5: {
+      implementations: [
+        {
+          title: "Multi-Tenant Pharmacy E-Commerce System",
+          desc: "Built a role-based e-commerce solution where multiple pharmacies could list medicines and hospitals could track prescriptions and stock levels in real-time.",
+        },
+        {
+          title: "Hierarchical Access & Data Security",
+          desc: "Implemented granular access control (RBAC + ABAC) with data encryption for admins, doctors, pharmacists, and patients, ensuring HIPAA & GDPR compliance.",
+        },
+        {
+          title: "Dynamic Scheduling with Conflict Resolution",
+          desc: "Designed a smart appointment system that automatically resolves conflicts based on doctor availability, patient urgency, and existing bookings.",
+        },
+        {
+          title: "Real-Time Insurance & Billing System",
+          desc: "Developed a dynamic billing engine that calculates costs based on insurance policies and hospital pricing models, with automated claim processing.",
+        },
+        {
+          title: "Optimized Query Performance in PostgreSQL",
+          desc: "Implemented materialized views, partitioning, and custom indexing to reduce patient record search times from seconds to milliseconds.",
+        },
+        {
+          title: "Role-Based Dashboards with Personalized UI",
+          desc: "Built custom dashboards for patients, doctors, pharmacists, and admins, tailoring features and analytics based on user roles.",
+        },
+
+        {
+          title: "Minimalist & Intuitive UI for Medical Workflows",
+          desc: "Designed a clean, user-friendly interface with one-click actions for appointments, prescriptions, and emergency calls.",
+        },
+        {
+          title: "Smooth Animations & Micro-Interactions",
+          desc: "Enhanced UX with fluid transitions, button feedback animations, and gesture-based navigation.",
+        },
+      ],
+      stack: [
+        { title: "Frontend", items: ["Next.js", "React Native"] },
+        { title: "Styling", items: ["MUI"] },
+        { title: "Backend", items: ["NestJS", "Node.js"] },
+        { title: "Database", items: ["PostgreSQL", "Prisma"] },
+        {
+          title: "State & Hooks",
+          items: ["React Hooks", "useState", "useEffect", "useMemo", "useRef"],
+        },
+        {
+          title: "Deployment",
+          items: ["Docker", "Vercel"],
+        },
+      ],
+    },
   };
 
   const details = projectDetails[projectId];

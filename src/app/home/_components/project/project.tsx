@@ -35,13 +35,49 @@ export default function ProjectsSection() {
       image: "/Images/EthanSuero-1.jpg",
       details: "true",
     },
+    {
+      id: 4,
+      title: "Horizon",
+      description:
+        "Horizon is a multi-page web application built with Next.js and Tailwind CSS that provides detailed information about the Saudi passport. It shows which countries require a visa to enter Saudi Arabia and offers guidance on obtaining Saudi citizenship. The project uses reusable React components for a consistent UI, utility files to manage structured data, and React Hooks (useState, useEffect, useMemo, useRef) to handle dynamic content and optimize performance. React Icons and Framer Motion enhance the visuals, Next.js Image ensures optimized loading, and Tailwind CSS provides a responsive layout. The project is deployed on Vercel for fast and globally accessible performance.",
+      tech: [
+        "Next.js",
+        "Tailwind CSS",
+        "React Hooks",
+        "Framer Motion",
+        "React Icons",
+        "Next/Image",
+        "Utils",
+      ],
+      image: "/Images/Horizon.jpg",
+      details: "true",
+    },
+    {
+  id: 5,
+  title: "Dr Wafa Clinics App/Booking Engine",
+  description:
+    "Dr Wafa Clinics App/Booking Engine is a scalable hospital management system designed to streamline healthcare operations. Built with NestJS and PostgreSQL,  it manages appointments, pharmacy e-commerce, billing, and procurement. The system features conflict-free scheduling, automated insurance billing, and real-time stock tracking. A React Native mobile app ensures real-time updates, offline support, and role-based dashboards for doctors, patients, and admins. Deployed with Docker and Vercel, the solution guarantees high availability, seamless scaling, and secure data handling.",
+  tech: [
+    "Next.js",
+    "NestJS",
+    "TypeScript",
+    "PostgreSQL",
+    "Prisma",
+    "React Native",
+    "MUI",
+    "Docker",
+    "Vercel"
+  ],
+  image: "/Images/WafaClinic-1.jpg",
+  details: "true"
+}
+
   ];
 
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <section className="bg-gray-900 text-white py-16 px-6" id="projects">
-
       <div className="text-center mb-12">
         <span className="inline-block px-4 py-1 border border-gray-600 rounded-full text-sm">
           My Projects
@@ -62,13 +98,12 @@ export default function ProjectsSection() {
           return (
             <div
               key={proj.title}
-              className={`flex flex-col md:flex-row items-center gap-8 ${
-                !isRightImage ? "md:flex-row-reverse" : ""
+              className={`flex flex-col lg:flex-row items-center gap-8 ${
+                !isRightImage ? "lg:flex-row-reverse" : ""
               }`}
             >
-
               <motion.div
-                className="relative w-full md:w-2/3 rounded-xl overflow-visible"
+                className="relative w-full lg:w-2/3 rounded-xl overflow-visible"
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -83,7 +118,7 @@ export default function ProjectsSection() {
                 />
 
                 <motion.div
-                  className={`absolute left-6/9 transform -translate-x-1/2 -bottom-14 md:-bottom-6 flex flex-wrap gap-2 bg-white/10 p-2 rounded-lg backdrop-blur-sm justify-center md:justify-start w-[80%] md:w-[75%]`}
+                  className={`absolute left-6/9 transform -translate-x-1/2 -bottom-14 md:-bottom-6 flex flex-wrap gap-2 bg-white/10 p-2 rounded-lg backdrop-blur-sm justify-center md:justify-start w-[80%] md:w-[70%] lg:w-[75%]`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
@@ -101,14 +136,18 @@ export default function ProjectsSection() {
               </motion.div>
 
               <motion.div
-                className="w-full md:w-1/2 mt-6 md:mt-0"
+                className="w-full lg:w-1/2 mt-6 md:mt-0"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9 }}
                 viewport={{ once: false }}
               >
-                <h3 className="text-base lg:text-xl font-semibold">{proj.title}</h3>
-                <p className="text-gray-400 mt-3 text-xs md:text-sm">{proj.description}</p>
+                <h3 className="text-base lg:text-xl font-semibold">
+                  {proj.title}
+                </h3>
+                <p className="text-gray-400 mt-3 text-xs md:text-sm text-justify">
+                  {proj.description}
+                </p>
 
                 <button
                   onClick={() => setSelectedProject(proj)}

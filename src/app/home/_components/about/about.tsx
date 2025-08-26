@@ -69,14 +69,14 @@ export default function AboutMe() {
             Scalable Websites
           </h1>
 
-          <p className="text-gray-300 text-base xl:text-xl leading-relaxed">
+          <p className="text-gray-300 text-base xl:text-xl leading-relaxed text-justify">
             As a Front-End Developer at The Dev Corporate, I built responsive
             and dynamic web applications using React, Next.js, Redux, Tailwind
             CSS and Material UI. Now freelancing, I help clients create
             optimized, interactive interfaces.
           </p>
 
-          <p className="text-gray-300 text-base xl:text-lg leading-relaxed">
+          <p className="text-gray-300 text-base xl:text-lg leading-relaxed text-justify">
             I specialize in building scalable front-end architectures,
             implementing modern UI/UX designs, and ensuring seamless integration
             with backend services. My focus is on creating high-performance,

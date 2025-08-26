@@ -21,7 +21,7 @@ export default function HeroSection() {
       </motion.h1>
 
       <motion.p
-        className="mt-6 max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl text-base sm:text-base md:text-lg text-gray-300 leading-relaxed"
+        className="text-justify mt-6 max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl text-base sm:text-base md:text-lg text-gray-300 leading-relaxed"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
