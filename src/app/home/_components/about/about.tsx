@@ -15,9 +15,9 @@ export default function AboutMe() {
         </span>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 relative">
+      <div className="flex flex-col md:flex-row items-center lg:items-start gap-10 relative">
         <motion.div
-          className="relative w-full lg:w-1/3 h-80 md:h-[400px] flex-shrink-0"
+          className="relative w-full md:w-1/3 h-80 md:h-[400px] flex-shrink-0"
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -50 }}
           transition={{ duration: 0.8 }}
@@ -31,27 +31,27 @@ export default function AboutMe() {
           />
 
           <motion.div
-            className="absolute top-[-20px] left-[-20px] bg-black p-4 rounded-lg text-center z-10"
+            className="absolute top-[-20px] left-[-20px] md:left-[-45px] lg:left-[-80px] bg-black/70 p-2 md:p-4 rounded-lg text-center z-10"
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             initial={{ opacity: 0, x: -50, y: -50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold">10+</h2>
-            <p className="text-gray-400 text-xs md:text-sm">
+            <h2 className="text-xl md:text-2xl font-bold">10+</h2>
+            <p className="text-gray-400 text-xs lg:text-sm">
               Projects Completed
             </p>
           </motion.div>
 
           <motion.div
-            className="absolute bottom-[-20px] right-[-20px] bg-black p-4 rounded-lg text-center z-10"
+            className="absolute bottom-[-20px] right-[-20px] bg-black/70 p-2 lg:p-4 rounded-lg text-center z-10"
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             initial={{ opacity: 0, x: 50, y: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold">1</h2>
-            <p className="text-gray-400 text-xs md:text-sm">
+            <h2 className="text-xl md:text-2xl font-bold">1</h2>
+            <p className="text-gray-400 text-xs lg:text-sm">
               Years of Experience
             </p>
           </motion.div>
@@ -64,19 +64,19 @@ export default function AboutMe() {
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <h1 className="text-2xl sm:text-3xl xl:text-5xl font-bold">
+          <h1 className="text-2xl xl:text-4xl font-bold">
             Front-End Developer @ The Dev Corporate | Freelancer | Developing
             Scalable Websites
           </h1>
 
-          <p className="text-gray-300 text-base sm:text-base xl:text-xl leading-relaxed">
+          <p className="text-gray-300 text-base xl:text-xl leading-relaxed">
             As a Front-End Developer at The Dev Corporate, I built responsive
             and dynamic web applications using React, Next.js, Redux, Tailwind
             CSS and Material UI. Now freelancing, I help clients create
             optimized, interactive interfaces.
           </p>
 
-          <p className="text-gray-300 text-base sm:text-base xl:text-lg leading-relaxed">
+          <p className="text-gray-300 text-base xl:text-lg leading-relaxed">
             I specialize in building scalable front-end architectures,
             implementing modern UI/UX designs, and ensuring seamless integration
             with backend services. My focus is on creating high-performance,

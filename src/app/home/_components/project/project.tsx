@@ -14,7 +14,7 @@ export default function ProjectsSection() {
       description:
         "Wolves Art is a modern creative agency website built using Next.js, MUI, and Framer Motion. It showcases a wide range of design services, including Web Design, UI/UX Design, Print, Illustration, Motion Design, and Interactive Design. The website features a clean and responsive layout with smooth animations, making it easy for visitors to explore services and projects. Wolves Art combines creativity, functionality, and an engaging user experience to present professional design work in a visually appealing way.",
       tech: ["Next.JS", "Framer Motion", "MUI", "React Hooks", "TypeScript"],
-      image: "/Images/WolvesArt.JPG",
+      image: "/Images/WolvesArt-2.JPG",
       details: "true",
     },
     {
@@ -107,8 +107,8 @@ export default function ProjectsSection() {
                 transition={{ duration: 0.9 }}
                 viewport={{ once: false }}
               >
-                <h3 className="text-xl font-semibold">{proj.title}</h3>
-                <p className="text-gray-400 mt-3 text-sm">{proj.description}</p>
+                <h3 className="text-base lg:text-xl font-semibold">{proj.title}</h3>
+                <p className="text-gray-400 mt-3 text-xs md:text-sm">{proj.description}</p>
 
                 <button
                   onClick={() => setSelectedProject(proj)}
