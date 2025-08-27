@@ -12,8 +12,8 @@ export default function ProjectsSection() {
       id: 1,
       title: "Wolves Art",
       description:
-        "Wolves Art is a modern creative agency website built using Next.JS, MUI, and Framer Motion. It showcases a wide range of design services, including Web Design, UI/UX Design, Print, Illustration, Motion Design, and Interactive Design. The website features a clean and responsive layout with smooth animations, making it easy for visitors to explore services and projects. Wolves Art combines creativity, functionality, and an engaging user experience to present professional design work in a visually appealing way.",
-      tech: ["Next.JS", "Framer Motion", "MUI", "React Hooks", "TypeScript"],
+        "Wolves Art is a modern creative agency website built using Next.js, MUI, and Framer Motion. It showcases a wide range of design services, including Web Design, UI/UX Design, Print, Illustration, Motion Design, and Interactive Design. The website features a clean and responsive layout with smooth animations, making it easy for visitors to explore services and projects. Wolves Art combines creativity, functionality, and an engaging user experience to present professional design work in a visually appealing way.",
+      tech: ["Next.js", "Framer Motion", "MUI", "React Hooks", "TypeScript"],
       image: "/Images/WolvesArt-2.jpg",
       details: "true",
     },
@@ -21,8 +21,8 @@ export default function ProjectsSection() {
       id: 2,
       title: "Lit Collective",
       description:
-        "Lit Collective is a modern web application built with React.JS and MUI (Material-UI). The website delivers a clean, responsive, and professional design that highlights creative content in a simple and user-friendly way. MUI was used for building consistent UI components and applying custom themes. The project was deployed on Vercel, ensuring fast performance and global accessibility.",
-      tech: ["React.JS", "MUI", "TypeScript", "CSS-in-JS"],
+        "Lit Collective is a modern web application built with React.js and MUI (Material-UI). The website delivers a clean, responsive, and professional design that highlights creative content in a simple and user-friendly way. MUI was used for building consistent UI components and applying custom themes. The project was deployed on Vercel, ensuring fast performance and global accessibility.",
+      tech: ["React.js", "MUI", "TypeScript", "CSS-in-js"],
       image: "/Images/LitCollective.jpg",
       details: "true",
     },
@@ -31,7 +31,7 @@ export default function ProjectsSection() {
       title: "Ethan Suero",
       description:
         "Ethan Suero is a web application built with React.js and MUI that delivers a sleek and responsive user interface. The project makes use of Material-UI’s theming and grid system to ensure a consistent design across devices. Structured with reusable components, the site is easy to maintain and extend. Deployed on Vercel, it benefits from fast loading speeds and reliable global hosting.",
-      tech: ["React.JS", "MUI", "TypeScript", "CSS-in-JS"],
+      tech: ["React.js", "MUI", "TypeScript", "CSS-in-js"],
       image: "/Images/EthanSuero-1.jpg",
       details: "true",
     },
@@ -56,10 +56,10 @@ export default function ProjectsSection() {
   id: 5,
   title: "Dr Wafa Clinics App/Booking Engine",
   description:
-    "Dr Wafa Clinics App/Booking Engine is a scalable hospital management system designed to streamline healthcare operations. Built with NestJS and PostgreSQL,  it manages appointments, pharmacy e-commerce, billing, and procurement. The system features conflict-free scheduling, automated insurance billing, and real-time stock tracking. A React Native mobile app ensures real-time updates, offline support, and role-based dashboards for doctors, patients, and admins. Deployed with Docker and Vercel, the solution guarantees high availability, seamless scaling, and secure data handling.",
+    "Dr Wafa Clinics App/Booking Engine is a scalable hospital management system designed to streamline healthcare operations. Built with Nestjs and PostgreSQL,  it manages appointments, pharmacy e-commerce, billing, and procurement. The system features conflict-free scheduling, automated insurance billing, and real-time stock tracking. A React Native mobile app ensures real-time updates, offline support, and role-based dashboards for doctors, patients, and admins. Deployed with Docker and Vercel, the solution guarantees high availability, seamless scaling, and secure data handling.",
   tech: [
     "Next.js",
-    "NestJS",
+    "Nestjs",
     "TypeScript",
     "PostgreSQL",
     "Prisma",

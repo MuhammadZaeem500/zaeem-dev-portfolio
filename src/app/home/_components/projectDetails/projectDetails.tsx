@@ -45,7 +45,7 @@ export default function ProjectDetails({ projectId }: ProjectDetailsProps) {
         { title: "Frontend", items: ["Next.js", "React", "MUI", "TypeScript"] },
         { title: "Animation", items: ["Framer Motion"] },
         { title: "State Management", items: ["React Hooks"] },
-        { title: "Styling", items: ["MUI Theming", "CSS-in-JS"] },
+        { title: "Styling", items: ["MUI Theming", "CSS-in-js"] },
         { title: "Deployment", items: ["Vercel"] },
       ],
     },
@@ -70,7 +70,7 @@ export default function ProjectDetails({ projectId }: ProjectDetailsProps) {
       ],
       stack: [
         { title: "Frontend", items: ["React.js", "MUI"] },
-        { title: "Styling", items: ["MUI Theming", "CSS-in-JS"] },
+        { title: "Styling", items: ["MUI Theming", "CSS-in-js"] },
         { title: "Deployment", items: ["Vercel"] },
       ],
     },
@@ -82,7 +82,7 @@ export default function ProjectDetails({ projectId }: ProjectDetailsProps) {
     },
     {
       title: "Responsive Design",
-      desc: "Implemented MUI grid system and CSS-in-JS to create a responsive layout for all devices."
+      desc: "Implemented MUI grid system and CSS-in-js to create a responsive layout for all devices."
     },
     {
       title: "Reusable Components",
@@ -99,7 +99,7 @@ export default function ProjectDetails({ projectId }: ProjectDetailsProps) {
   ],
   stack: [
     { title: "Framework", items: ["React.js"] },
-    { title: "Styling", items: ["MUI", "CSS-in-JS"] },
+    { title: "Styling", items: ["MUI", "CSS-in-js"] },
     { title: "Components", items: ["Reusable React Components"] },
     { title: "State & Hooks", items: ["React Hooks"] },
     { title: "Animations", items: ["Framer Motion"] },
@@ -195,7 +195,7 @@ export default function ProjectDetails({ projectId }: ProjectDetailsProps) {
       stack: [
         { title: "Frontend", items: ["Next.js", "React Native"] },
         { title: "Styling", items: ["MUI"] },
-        { title: "Backend", items: ["NestJS", "Node.js"] },
+        { title: "Backend", items: ["Nestjs", "Node.js"] },
         { title: "Database", items: ["PostgreSQL", "Prisma"] },
         {
           title: "State & Hooks",

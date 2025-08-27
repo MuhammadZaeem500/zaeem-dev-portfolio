@@ -21,7 +21,7 @@ export default function SkillsSection() {
     {
       title: "Backend",
       icon: "🖥️",
-      items: ["Node.js", "Express", "NestJS"],
+      items: ["Node.js", "Express", "Nestjs"],
     },
     {
       title: "Databases",

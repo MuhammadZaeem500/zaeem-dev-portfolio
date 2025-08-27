@@ -9,7 +9,7 @@ export default function HeroSection() {
       id="home"
     >
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold leading-snug md:leading-tight"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold leading-snug md:leading-tight "
         initial={{ opacity: 0, x: -200 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
@@ -17,7 +17,7 @@ export default function HeroSection() {
       >
         Crafting <span className="text-white">Responsive</span> Modern
         <br className="hidden sm:block" /> Web Apps
-        <span className="text-white"> With React & Next.JS</span>
+        <span className="text-white"> With React & Next.js</span>
       </motion.h1>
 
       <motion.p
