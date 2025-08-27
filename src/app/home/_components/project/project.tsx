@@ -45,8 +45,6 @@ export default function ProjectsSection() {
         "Tailwind CSS",
         "React Hooks",
         "Framer Motion",
-        "React Icons",
-        "Next/Image",
         "Utils",
       ],
       image: "/Images/Horizon.jpg",
@@ -60,13 +58,10 @@ export default function ProjectsSection() {
   tech: [
     "Next.js",
     "Nestjs",
-    "TypeScript",
     "PostgreSQL",
-    "Prisma",
     "React Native",
     "MUI",
     "Docker",
-    "Vercel"
   ],
   image: "/Images/WafaClinic-1.jpg",
   details: "true"
@@ -118,7 +113,7 @@ export default function ProjectsSection() {
                 />
 
                 <motion.div
-                  className={`absolute left-6/9 transform -translate-x-1/2 -bottom-14 md:-bottom-6 flex flex-wrap gap-2 bg-white/10 p-2 rounded-lg backdrop-blur-sm justify-center md:justify-start w-[80%] md:w-[70%] lg:w-[75%]`}
+                  className={`absolute left-6/11 md:left-6/9 transform -translate-x-1/2 -bottom-8 md:-bottom-6 flex flex-wrap gap-2 bg-white/10 p-2 rounded-lg backdrop-blur-sm justify-center md:justify-start w-[100%] md:w-[70%] lg:w-[75%]`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
@@ -142,7 +137,7 @@ export default function ProjectsSection() {
                 transition={{ duration: 0.9 }}
                 viewport={{ once: false }}
               >
-                <h3 className="text-base lg:text-xl font-semibold">
+                <h3 className="text-base md:text-xl font-semibold">
                   {proj.title}
                 </h3>
                 <p className="text-gray-400 mt-3 text-xs md:text-sm text-justify">
@@ -182,6 +177,7 @@ export default function ProjectsSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+             onClick={() => setSelectedProject(null)}
           >
             <motion.div
               className="bg-gray-900 p-6 rounded-xl max-w-3xl w-full relative overflow-y-auto max-h-[90vh]"
@@ -189,6 +185,7 @@ export default function ProjectsSection() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 50 }}
               transition={{ duration: 0.3 }}
+               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setSelectedProject(null)}
