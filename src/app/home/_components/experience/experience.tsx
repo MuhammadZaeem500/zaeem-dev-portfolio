@@ -7,34 +7,56 @@ interface Experience {
   company: string;
   location: string;
   period: string;
-  achievements: string[];
+  technologies: string[];
 }
 
 const experiences: Experience[] = [
   {
-    role: "Senior Full Stack Developer",
-    company: "The Dev Corporate",
+    role: "Front End Developer",
+    company: "Fiverr/Upwork/Freelancer",
     location: "Lahore, Punjab, Pakistan",
-    period: "Jan 2021 – Present",
-    achievements: [
-      "Led the development of enterprise-level applications using microservices and advanced APIs.",
-      "Architected a scalable, event-driven API system with 5+ microservices handling 500+ daily requests.",
-      "Built a WhatsApp automation platform with 20k+ active users.",
-      "Developed a distributed caching strategy cutting server costs by 20%.",
-      "Optimized AI-powered job recommendation system with vector embeddings.",
+    period: "May 2025 – Present",
+    technologies: [
+      "React",
+      "Nest.js",
+      "PostgreSQL",
+      "TypeScript",
+      "Redux",
+      "Framer Motion",
+      "Tailwind CSS",
+      "Next.js",
+      "Prisma",
+      "UI/UX Design",
+      "Express",
+      "MongoDB",
+      "Authentication",
+      "Vercel",
+      "Chart.js",
+      "D3.js",
     ],
   },
   {
-    role: "Associate Software Engineer",
-    company: "Egy4Tech",
+    role: "Front End Developer",
+    company: "The Dev Corporate",
     location: "Lahore, Punjab, Pakistan",
-    period: "Jun 2019 – Jan 2021",
-    achievements: [
-      "Developed web apps using React, Express, and MongoDB.",
-      "Collaborated with UI/UX designers for responsive design.",
-      "Enhanced database management understanding via Laravel projects.",
-      "Played a key role in creating an academic platform for students.",
-      "Implemented scalable authentication & reporting features.",
+    period: "Nov 2024 – May 2025",
+    technologies: [
+      "Next.js",
+      "React.js",
+      "Material UI (MUI)",
+      "Redux",
+      "Framer Motion",
+      "Tailwind CSS",
+      "Node.js",
+      "Nest.js",
+      "JavaScript",
+      "Custom Integrations",
+      "Creative UI/UX Design",
+      "Prisma",
+      "PostgreSQL",
+      "Vercel",
+      "Chart.js",
+      "D3.js",
     ],
   },
 ];
@@ -86,9 +108,12 @@ export default function ExperienceTimeline() {
                     <p className="text-gray-500 text-xs mb-4">
                       {exp.location} • {exp.period}
                     </p>
+                    <h4 className="mb-2 font-semibold text-sm md:text-base">
+                      Technologies worked with
+                    </h4>
                     <ul className="list-disc list-inside space-y-2 text-xs md:text-sm text-gray-300">
-                      {exp.achievements.map((ach, i) => (
-                        <li key={i}>{ach}</li>
+                      {exp.technologies.map((tech, i) => (
+                        <li key={i}>{tech}</li>
                       ))}
                     </ul>
                   </div>
@@ -132,9 +157,12 @@ export default function ExperienceTimeline() {
                     <p className="text-gray-500 text-xs mb-4">
                       {exp.location} • {exp.period}
                     </p>
+                    <h4 className="mb-2 font-semibold text-sm md:text-base">
+                      Technologies worked with
+                    </h4>
                     <ul className="list-disc list-inside space-y-2 text-xs md:text-sm text-gray-300">
-                      {exp.achievements.map((ach, i) => (
-                        <li key={i}>{ach}</li>
+                      {exp.technologies.map((tech, i) => (
+                        <li key={i}>{tech}</li>
                       ))}
                     </ul>
                   </div>
