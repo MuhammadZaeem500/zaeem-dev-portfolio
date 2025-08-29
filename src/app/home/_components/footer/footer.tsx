@@ -24,7 +24,7 @@ export default function Footer() {
               <Github className="w-4 h-4" />
             </a>
             <a
-              href="https://www.linkedin.com/in/muhammad-zaeem-sheikh-a38215202/"
+              href="https://www.linkedin.com/in/muhammad-zaeem-sheikh"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-900 p-2 rounded-full hover:bg-gray-700 transition"
@@ -85,7 +85,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/muhammad-zaeem-sheikh-a38215202/"
+                href="https://www.linkedin.com/in/muhammad-zaeem-sheikh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white"

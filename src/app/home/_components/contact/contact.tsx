@@ -113,7 +113,7 @@ export default function ContactSection() {
                 <Github className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
-                href="https://www.linkedin.com/in/muhammad-zaeem-sheikh-a38215202/"
+                href="https://www.linkedin.com/in/muhammad-zaeem-sheikh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-900 p-3 sm:p-3.5 rounded-full hover:bg-gray-700 transition"

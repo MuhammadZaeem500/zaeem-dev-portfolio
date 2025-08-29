@@ -63,7 +63,7 @@ export default function ProjectsSection() {
     "MUI",
     "Docker",
   ],
-  image: "/Images/WafaClinic-1.jpg",
+  image: "/Images/WafaClinic-3.jpg",
   details: "true"
 }
 
