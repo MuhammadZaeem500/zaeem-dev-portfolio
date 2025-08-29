@@ -15,12 +15,11 @@ export default function ContactSection() {
     if (!formRef.current) return;
     setLoading(true);
 
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_EMAILjs_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILjs_TEMPLATE_ID!,
+    emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         formRef.current,
-        process.env.NEXT_PUBLIC_EMAILjs_PUBLIC_KEY!
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       )
       .then(
         () => {
@@ -30,7 +29,7 @@ export default function ContactSection() {
         },
         (error) => {
           setSuccess("Oops! Something went wrong.");
-          console.error(error);
+          console.log("EmailJS error:", error);
           setLoading(false);
         }
       );
