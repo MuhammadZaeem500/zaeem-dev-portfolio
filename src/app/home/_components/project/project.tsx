@@ -68,9 +68,9 @@ export default function ProjectsSection() {
     },
     {
       id: 6,
-      title: "TDC HRM",
+      title: "HRM",
       description:
-        "TDC HRM is a comprehensive office management application built with React.js and MUI, designed to streamline tasks such as attendance tracking, leave applications, project management, payroll processing, and other administrative operations. The platform uses Redux for state management to ensure a consistent and responsive user experience. Authentication and role-based access control secure sensitive employee and payroll data. The backend is built with NestJS, PostgreSQL, and Prisma for scalable, efficient, and reliable data handling. Deployed on Vercel, it provides fast performance and reliable access for office staff.",
+        "HRM is a comprehensive office management application built with React.js and MUI, designed to streamline tasks such as attendance tracking, leave applications, project management, payroll processing, and other administrative operations. The platform uses Redux for state management to ensure a consistent and responsive user experience. Authentication and role-based access control secure sensitive employee and payroll data. The backend is built with NestJS, PostgreSQL, and Prisma for scalable, efficient, and reliable data handling. Deployed on Vercel, it provides fast performance and reliable access for office staff.",
       tech: [
         "React.js",
         "MUI",
