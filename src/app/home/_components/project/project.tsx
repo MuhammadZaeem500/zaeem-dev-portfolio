@@ -32,7 +32,7 @@ export default function ProjectsSection() {
       description:
         "Ethan Suero is a web application built with React.js and MUI that delivers a sleek and responsive user interface. The project makes use of Material-UI’s theming and grid system to ensure a consistent design across devices. Structured with reusable components, the site is easy to maintain and extend. Deployed on Vercel, it benefits from fast loading speeds and reliable global hosting.",
       tech: ["React.js", "MUI", "TypeScript", "CSS-in-js"],
-      image: "/Images/EthanSuero-1.jpg",
+      image: "/Images/EthanSuero.png",
       details: "true",
     },
     {
@@ -51,22 +51,40 @@ export default function ProjectsSection() {
       details: "true",
     },
     {
-  id: 5,
-  title: "Dr Wafa Clinics App/Booking Engine",
-  description:
-    "Dr Wafa Clinics App/Booking Engine is a scalable hospital management system designed to streamline healthcare operations. Built with Nestjs and PostgreSQL,  it manages appointments, pharmacy e-commerce, billing, and procurement. The system features conflict-free scheduling, automated insurance billing, and real-time stock tracking. A React Native mobile app ensures real-time updates, offline support, and role-based dashboards for doctors, patients, and admins. Deployed with Docker and Vercel, the solution guarantees high availability, seamless scaling, and secure data handling.",
-  tech: [
-    "Next.js",
-    "Nestjs",
-    "PostgreSQL",
-    "React Native",
-    "MUI",
-    "Docker",
-  ],
-  image: "/Images/WafaClinic-3.jpg",
-  details: "true"
-}
-
+      id: 5,
+      title: "Dr Wafa Clinics App/Booking Engine",
+      description:
+        "Dr Wafa Clinics App/Booking Engine is a scalable hospital management system designed to streamline healthcare operations. Built with Nestjs and PostgreSQL,  it manages appointments, pharmacy e-commerce, billing, and procurement. The system features conflict-free scheduling, automated insurance billing, and real-time stock tracking. A React Native mobile app ensures real-time updates, offline support, and role-based dashboards for doctors, patients, and admins. Deployed with Docker and Vercel, the solution guarantees high availability, seamless scaling, and secure data handling.",
+      tech: [
+        "Next.js",
+        "Nestjs",
+        "PostgreSQL",
+        "React Native",
+        "MUI",
+        "Docker",
+      ],
+      image: "/Images/WafaClinic.jpg",
+      details: "true",
+    },
+    {
+      id: 6,
+      title: "TDC HRM",
+      description:
+        "TDC HRM is a comprehensive office management application built with React.js and MUI, designed to streamline tasks such as attendance tracking, leave applications, project management, payroll processing, and other administrative operations. The platform uses Redux for state management to ensure a consistent and responsive user experience. Authentication and role-based access control secure sensitive employee and payroll data. The backend is built with NestJS, PostgreSQL, and Prisma for scalable, efficient, and reliable data handling. Deployed on Vercel, it provides fast performance and reliable access for office staff.",
+      tech: [
+        "React.js",
+        "MUI",
+        "Redux",
+        "NestJS",
+        "PostgreSQL",
+        "Prisma",
+        "TypeScript",
+        "JavaScript",
+        "Vercel",
+      ],
+      image: "/Images/TDC.png",
+      details: "true",
+    },
   ];
 
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -177,7 +195,7 @@ export default function ProjectsSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-             onClick={() => setSelectedProject(null)}
+            onClick={() => setSelectedProject(null)}
           >
             <motion.div
               className="bg-gray-900 p-6 rounded-xl max-w-3xl w-full relative overflow-y-auto max-h-[90vh]"
@@ -185,7 +203,7 @@ export default function ProjectsSection() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 50 }}
               transition={{ duration: 0.3 }}
-               onClick={(e) => e.stopPropagation()}
+              onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setSelectedProject(null)}

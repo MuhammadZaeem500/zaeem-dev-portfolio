@@ -74,38 +74,38 @@ export default function ProjectDetails({ projectId }: ProjectDetailsProps) {
         { title: "Deployment", items: ["Vercel"] },
       ],
     },
-3: {
-  implementations: [
-    {
-      title: "Service Showcase",
-      desc: "Designed interactive service cards to present digital design and Webflow offerings clearly and attractively."
+    3: {
+      implementations: [
+        {
+          title: "Service Showcase",
+          desc: "Designed interactive service cards to present digital design and Webflow offerings clearly and attractively.",
+        },
+        {
+          title: "Responsive Design",
+          desc: "Implemented MUI grid system and CSS-in-js to create a responsive layout for all devices.",
+        },
+        {
+          title: "Reusable Components",
+          desc: "Built modular React components for consistent UI and easy maintenance across pages.",
+        },
+        {
+          title: "Animations & Interactivity",
+          desc: "Enhanced user experience with Framer Motion for smooth transitions and interactive elements.",
+        },
+        {
+          title: "Deployment",
+          desc: "Hosted on Vercel for fast, globally accessible performance.",
+        },
+      ],
+      stack: [
+        { title: "Framework", items: ["React.js"] },
+        { title: "Styling", items: ["MUI", "CSS-in-js"] },
+        { title: "Components", items: ["Reusable React Components"] },
+        { title: "State & Hooks", items: ["React Hooks"] },
+        { title: "Animations", items: ["Framer Motion"] },
+        { title: "Deployment", items: ["Vercel"] },
+      ],
     },
-    {
-      title: "Responsive Design",
-      desc: "Implemented MUI grid system and CSS-in-js to create a responsive layout for all devices."
-    },
-    {
-      title: "Reusable Components",
-      desc: "Built modular React components for consistent UI and easy maintenance across pages."
-    },
-    {
-      title: "Animations & Interactivity",
-      desc: "Enhanced user experience with Framer Motion for smooth transitions and interactive elements."
-    },
-    {
-      title: "Deployment",
-      desc: "Hosted on Vercel for fast, globally accessible performance."
-    }
-  ],
-  stack: [
-    { title: "Framework", items: ["React.js"] },
-    { title: "Styling", items: ["MUI", "CSS-in-js"] },
-    { title: "Components", items: ["Reusable React Components"] },
-    { title: "State & Hooks", items: ["React Hooks"] },
-    { title: "Animations", items: ["Framer Motion"] },
-    { title: "Deployment", items: ["Vercel"] }
-  ]
-},
 
     4: {
       implementations: [
@@ -205,6 +205,56 @@ export default function ProjectDetails({ projectId }: ProjectDetailsProps) {
           title: "Deployment",
           items: ["Docker", "Vercel"],
         },
+      ],
+    },
+
+    6: {
+      implementations: [
+        {
+          title: "Task & Attendance Management",
+          desc: "Implemented modules for attendance tracking, project assignments, and task monitoring with real-time updates using Redux.",
+        },
+        {
+          title: "Leave Application Management",
+          desc: "Enabled employees to apply for leaves and allowed HR to track and manage all leave requests efficiently.",
+        },
+        {
+          title: "Project Tracking",
+          desc: "Developed a system to track ongoing projects, monitor progress, and assign responsibilities to team members.",
+        },
+        {
+          title: "Payroll & Employee Records",
+          desc: "Developed secure payroll and employee management system with NestJS, PostgreSQL, and Prisma for efficient data storage and retrieval.",
+        },
+        {
+          title: "Authentication & Access Control",
+          desc: "Implemented user authentication and role-based access control to secure sensitive employee and payroll information.",
+        },
+        {
+          title: "Reusable Components",
+          desc: "Built modular React components for forms, tables, and dashboards to maintain consistency across the app.",
+        },
+        {
+          title: "Responsive UI",
+          desc: "Designed a responsive and intuitive interface using MUI, ensuring seamless experience across desktop and mobile devices.",
+        },
+        {
+          title: "Deployment",
+          desc: "Deployed the application on Vercel for fast, globally accessible performance.",
+        },
+      ],
+      stack: [
+        {
+          title: "Frontend",
+          items: ["React.js", "MUI", "Redux", "TypeScript", "JavaScript"],
+        },
+        { title: "Backend", items: ["NestJS"] },
+        { title: "Database", items: ["PostgreSQL", "Prisma"] },
+        {
+          title: "Authentication",
+          items: ["Role-Based Access Control", "JWT/Auth System"],
+        },
+        { title: "Deployment", items: ["Vercel"] },
       ],
     },
   };
