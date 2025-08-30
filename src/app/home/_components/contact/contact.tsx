@@ -37,7 +37,7 @@ export default function ContactSection() {
 
   return (
     <motion.section
-      className="bg-black text-white py-28 md:py-28 px-4 sm:px-6 lg:px-16"
+      className="bg-black text-white py-28 md:py-30 px-4 sm:px-6 lg:px-16"
       id="contact"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
