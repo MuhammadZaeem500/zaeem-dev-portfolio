@@ -51,7 +51,7 @@ export default function ContactSection() {
         transition={{ duration: 0.9, delay: 0.2 }}
         viewport={{ once: false }}
       >
-        <button className="border border-white px-4 py-1 rounded-full text-sm mb-4 hover:bg-white hover:text-black transition">
+        <button className="border border-white px-4 py-1 rounded-full text-sm mb-4">
           Get In Touch
         </button>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3">
