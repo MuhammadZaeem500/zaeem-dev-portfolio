@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, ArrowUp, ArrowDown } from "lucide-react";
+import { Github, Linkedin, ArrowUp } from "lucide-react";
 
 export default function Footer() {
   return (
