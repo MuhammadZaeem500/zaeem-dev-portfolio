@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
-import "./globals.css";
+// The stylesheet is resolved by Next.js at build time.
+// @ts-expect-error CSS side-effect imports are not typed by TypeScript.
+import "@/app/globals.css";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
